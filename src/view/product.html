@@ -1,0 +1,15 @@
+<ul>
+  <% products.forEach( (product) => {%>
+  <li>
+    <ul>
+      <li><%= product.id %></li>
+      <li><%= product.name %></li>
+      <li><%= product.price %></li>
+      <li><%= product.product %></li>
+      <li><%= product.color %></li>
+      <li><%= product.createdAt %></li>
+      <li><%= product.image %></li>
+    </ul>
+  </li>
+  <% })%>
+</ul>

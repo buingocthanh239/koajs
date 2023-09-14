@@ -91,8 +91,8 @@ const getProductById = async (ctx) => {
 
 const getAllProduct = async (ctx) => {
    try {
-        const {limit, orderBy, sortType } = ctx.query;
-        const products = productRepository.getALl({ limit, orderBy, sortType})
+        const {limit, orderBy, fields } = ctx.query;
+        const products = productRepository.getALl({ limit, orderBy, fields})
         await ctx.render('product', { products })
    }  catch (e) {
         ctx.status = 404; 

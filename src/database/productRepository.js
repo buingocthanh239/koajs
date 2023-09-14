@@ -58,7 +58,7 @@ const getALl = (option) => {
     if (option.sortType === 'DESC') {
         if (option.orderBy === 'id')  returnProduct.sort((curr,next) => next.id - curr.id);
         if (option.orderBy === 'price')  returnProduct.sort((curr,next) => parseInt(next.price) - parseInt(curr.price));
-        if (option.orderBy === 'createdAt') returnProduct.sort((curr, next) => new Date(curr.createdAt) - new Date(next.createdAt))
+        if (option.orderBy === 'createdAt') returnProduct.sort((curr, next) => new Date(next.createdAt) - new Date(curr.createdAt))
         returnProduct.sort((curr, next) => next[option.orderBy] - curr[option.orderBy])
     }
     return returnProduct.slice(0,parseInt(option.limit))  
